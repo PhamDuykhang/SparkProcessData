@@ -1,5 +1,6 @@
 package vn.edu.ctu.cit.thesis.dataprocess;
 
+import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.spark.ml.feature.VectorAssembler;
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
@@ -21,4 +22,6 @@ public class SparkUtil {
 
 
     }
+
+
 }

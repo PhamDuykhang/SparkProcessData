@@ -6,6 +6,8 @@ package vn.edu.ctu.cit.thesis.dataprocess;
 import com.datastax.spark.connector.japi.CassandraJavaUtil;
 import com.datastax.spark.connector.japi.CassandraStreamingJavaUtil;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
+import org.apache.kafka.clients.producer.KafkaProducer;
+import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.apache.spark.SparkConf;
 
@@ -138,7 +140,7 @@ public class DicomProcessData {
                     long endTime = System.nanoTime();
 					System.out.println("Save success!!");
                     long timeElapsed = endTime - startTime;
-                    System.out.println("Thoi gian thuc hien : "+timeElapsed/1000000);
+                    System.out.println("Thoi gian thuc hien : "+timeElapsed/1000000000);
                 }
                 if(modeltype.equalsIgnoreCase("MLP")){
                     MultilayerPerceptronClassificationModel model;
