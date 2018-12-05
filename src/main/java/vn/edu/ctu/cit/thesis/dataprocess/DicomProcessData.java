@@ -55,6 +55,7 @@ public class DicomProcessData {
             new StructField("DistanceWithSkull", DataTypes.FloatType, true, Metadata.empty()),
             new StructField("Diameter", DataTypes.FloatType, true, Metadata.empty()),
             new StructField("Solidity", DataTypes.FloatType, true, Metadata.empty()),
+            new StructField("ConvexArea", DataTypes.FloatType, true, Metadata.empty()),
             new StructField("BBULX", DataTypes.FloatType, true, Metadata.empty()),
             new StructField("BBULY", DataTypes.FloatType, true, Metadata.empty()),
             new StructField("BBWith", DataTypes.FloatType, true, Metadata.empty()),
@@ -114,7 +115,7 @@ public class DicomProcessData {
         conectionproperties.put("user","root");
         conectionproperties.put("password","");
         String[] arrayColFeature = {"Area","CentroidX","CentroidY", "Perimeter","DistanceWithSkull","Diameter"
-                ,"Solidity", "BBULX","BBULY","BBWith","BBHeight","FilledArea","Extent", "Eccentricity", "MajorAxisLength"
+                ,"Solidity","ConvexArea", "BBULX","BBULY","BBWith","BBHeight","FilledArea","Extent", "Eccentricity", "MajorAxisLength"
                 , "MinorAxisLength","Orientation"};
         VectorAssembler vector_assemble = new VectorAssembler()
                 .setInputCols(arrayColFeature)
